@@ -19,11 +19,6 @@ var gamepadAPI = {
         gamepadAPI.controllers[event.gamepad.index] = controller;
         gamepadAPI.active = true;
         console.log("Connected Gamepad ID: "+controllerID+".");
-
-        var e = event;
-        console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-          e.gamepad.index, e.gamepad.id,
-          e.gamepad.buttons.length, e.gamepad.axes.length);
     },
     gamepadDisconnected: function(event) {
         delete gamepadAPI.controllers[event.gamepad.index];
