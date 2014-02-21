@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Gamepad API Test</title>
+    <meta charset="utf-8">
+    <title>Gamepad API Test</title>
 </head>
 <body>
 <p>Check the browser's JavaScript console for output.</p>
@@ -32,7 +32,7 @@ var gamepadAPI = {
         if(pressed) {
             console.log("Button "+button+" was pressed.");
             if(button == 1) { // button[1] is B or O
-              GAME.startNewGame();
+                GAME.startNewGame();
             }
         }
         else {
@@ -66,9 +66,9 @@ window.addEventListener("gamepadaxismove", function(e){
 /* Let's create a GAME object for our game */
 var GAME = {};
 
-/* Here's the function that will start your game */
-GAME.startNewGame = function(){
-  alert("New game started!");
+/* Here's the function that will start our game */
+GAME.startNewGame = function() {
+    alert("New game started!");
 }
 
 </script>
