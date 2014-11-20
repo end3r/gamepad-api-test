@@ -18,7 +18,7 @@ var gamepadAPI = {
         var controllerID = event.gamepad.id;
         gamepadAPI.controllers[event.gamepad.index] = controller;
         gamepadAPI.active = true;
-        console.log("Connected Gamepad ID: "+controllerID+".");
+        console.log("Connected Gamepad ID: %s.", controllerID);
     },
     gamepadDisconnected: function(event) {
         delete gamepadAPI.controllers[event.gamepad.index];
@@ -30,19 +30,19 @@ var gamepadAPI = {
     buttonPressed: function(event, pressed) {
         var button = event.button;
         if(pressed) {
-            console.log("Button "+button+" was pressed.");
+            console.log("Button %s was pressed.", button);
             if(button == 1) { // button[1] is B or O
                 GAME.startNewGame();
             }
         }
         else {
-            console.log("Button "+button+" was released.");
+            console.log("Button %s was released.", button);
         }
     },
     axisPressed: function(event) {
         var axis = event.axis;
         var value = event.value;
-        console.log("Axis: "+axis+", value: "+value+".");
+        console.log("Axis: %s, value: %s.", axis, value);
     }
 };
 
